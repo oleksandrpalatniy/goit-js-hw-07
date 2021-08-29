@@ -1,0 +1,14 @@
+ul {
+  list-style: none;
+}
+
+.images__list {
+  display: flex;
+  justify-content: center;
+}
+
+.images {
+  width: 320px;
+  height: 180px;
+  margin-right: 10px;
+}
