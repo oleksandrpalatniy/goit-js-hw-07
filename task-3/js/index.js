@@ -15,20 +15,13 @@ const images = [
 ];
 
 
-const ulList = document.querySelector('ul')
-
+const ulList = document.getElementById('gallery')
+ulList.className = 'images__list'
 
 const elements = images.map(value => {
-    const imageList = document.createElement('li')
-    const imageEl = document.createElement('img')
-    imageEl.classList.add('images')
-    imageEl.src = value.url;
-    imageEl.alt = value.alt;
-    imageList.appendChild(imageEl);
-    return imageList
+  const imageList = `<li> <img class="images" src='${value.url}' alt='${value.alt}'> </li>`
+  return imageList
 })
-ulList.classList.toggle("images__list")
 
-ulList.append(...elements)
-
+ulList.insertAdjacentHTML('afterbegin', elements)
 
